@@ -39,7 +39,7 @@ body {
     transform: translate3d(0,0,0);
 /* Set your background with this */
 
-    background: #121c25 url("./assets/css/images/bg001.png") bottom left; /* ALTERADO de bg.jpg para bg.png */
+    background: #121c25 url("/assets/css/images/bg001.png") bottom left; /* ALTERADO de bg.jpg para bg.png */
     background-repeat: repeat-x;
     height: 100%;
     left: 0;
@@ -229,6 +229,11 @@ body {
   /* Ajuste a altura do último item */
   #last-item {
     margin-bottom: 50px; /* Espaço extra para garantir que o último item seja totalmente visível */
+  }
+
+  #bg {
+    background-size: 4500px auto; /* Ajuste o tamanho para dispositivos móveis */
+    width: 13500px; /* Ajuste a largura para dispositivos móveis */
   }
 }
 
