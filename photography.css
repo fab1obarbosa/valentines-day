@@ -39,7 +39,7 @@ body {
     transform: translate3d(0,0,0);
 /* Set your background with this */
 
-    background: #121c25 url("/assets/css/images/bg001.png") bottom left; /* ALTERADO de bg.jpg para bg.png */
+    background: red url("./assets/css/images/bg001.png") bottom left; /* ALTERADO de bg.jpg para bg.png */
     background-repeat: repeat-x;
     height: 100%;
     left: 0;
