@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("font-awesome.min.css");
+
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15pt;
+    font-weight: 300 !important;
+    letter-spacing: -0.025em;
+    line-height: 1.75em;
+    overflow: hidden; /* Impede que o conteúdo da página faça scroll */
+    background-color: #f2f2f2; /* Cor de fundo padrão */
+  }
+  
+/* BG */
+
+#bg {
+    z-index: -1;
+    -moz-animation: bg 60s linear infinite;
+    -webkit-animation: bg 60s linear infinite;
+    -ms-animation: bg 60s linear infinite;
+    animation: bg 60s linear infinite;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+/* Set your background with this */
+
+    background: #121c25 url("/assets/css/images/bg001.png") bottom left; /* ALTERADO de bg.jpg para bg.png */
+    background-repeat: repeat-x;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+}
+
+@-moz-keyframes bg {
+    0% {
+        -moz-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    100% {
+        -moz-transform: translate3d(-2250px,0,0);
+        -webkit-transform: translate3d(-2250px,0,0);
+        -ms-transform: translate3d(-2250px,0,0);
+        transform: translate3d(-2250px,0,0);
+    }
+}
+
+@-webkit-keyframes bg {
+    0% {
+        -moz-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    100% {
+        -moz-transform: translate3d(-2250px,0,0);
+        -webkit-transform: translate3d(-2250px,0,0);
+        -ms-transform: translate3d(-2250px,0,0);
+        transform: translate3d(-2250px,0,0);
+    }
+}
+
+@-ms-keyframes bg {
+    0% {
+        -moz-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    100% {
+        -moz-transform: translate3d(-2250px,0,0);
+        -webkit-transform: translate3d(-2250px,0,0);
+        -ms-transform: translate3d(-2250px,0,0);
+        transform: translate3d(-2250px,0,0);
+    }
+}
+
+@keyframes bg {
+    0% {
+        -moz-transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    100% {
+        -moz-transform: translate3d(-2250px,0,0);
+        -webkit-transform: translate3d(-2250px,0,0);
+        -ms-transform: translate3d(-2250px,0,0);
+        transform: translate3d(-2250px,0,0);
+    }
+}
+
+#bg {
+    background-size: 2250px auto;
+    width: 6750px;
+}
+  
+  /* Estilo para o cabeçalho */
+  header {
+    text-align: center;
+    padding: 20px 0;
+    color: #fff; /* Cor do texto do cabeçalho */
+  }
+  
+  /* Estilo para o conteúdo principal */
+  main {
+    padding: 20px;
+    max-height: calc(100vh - 200px); /* Altura máxima igual à altura da janela - altura do cabeçalho */
+    overflow-y: auto; /* Sempre mostra a barra de rolagem vertical */
+    scrollbar-width: none; /* Oculta a barra de rolagem do Firefox */
+    -ms-overflow-style: none; /* Oculta a barra de rolagem do Internet Explorer e Edge */
+    padding: 20px;
+  }
+
+  main::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem do WebKit */
+  }
+  
+  /* Estilo para as divs das fotos */
+  #photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Espaçamento entre as divs */
+  }
+  
+  .photo {
+    width: calc(33.33% - 20px); /* 33.33% para até três fotos por linha, menos o espaçamento */
+    margin-bottom: 70px; /* Espaçamento entre as linhas */
+    position: relative;
+    background-color: #fff; /* Cor de fundo das polaroids */
+    padding-bottom: 40px; /* Espaço maior nas bordas inferiores */
+    border-radius: 20px;
+  }
+  
+  /* Estilo para a imagem dentro da div */
+  .photo img {
+    width: 90%;
+    height: 90%;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin: 20px auto 0;
+    border-radius: 20px;
+  }
+  
+  /* Estilo para o texto de legenda */
+  .caption {
+    text-align: center;
+    bottom: 10px;
+    margin: 10px 20px 10px;
+    color: #000;
+    padding: 5px 10px;
+    font-size: 18px;
+  }
+
+  .last-item {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.last-item .caption {
+    font-size: 24px; /* Ajuste o tamanho do texto conforme necessário */
+    margin-bottom: 20px; /* Espaçamento entre o texto e o botão */
+}
+
+/* Icon */
+
+.custom-button {
+  background-color: #ff0000; /* Cor de fundo vermelha */
+  color: #fff; /* Cor do texto */
+  border: none; /* Remove a borda */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 25px; /* Tamanho da fonte */
+  border-radius: 15px; /* Borda arredondada */
+  cursor: pointer; /* Muda o cursor ao passar por cima */
+  transition: background-color 0.3s, color 0.3s; /* Animação de transição */
+  padding: 10px 40px;
+}
+
+.custom-button:hover {
+  background-color: #000; /* Cor de fundo vermelha mais escura no hover */
+}
+
+.custom-link {
+  text-decoration: none; /* Remove sublinhado de link */
+  color: inherit; /* Herda a cor do texto do pai (botão) */
+}
+
+/* Estilo para dispositivos móveis */
+@media screen and (max-width: 480px) {
+  .photo {
+    width: calc(100% - 20px); /* 100% da largura da tela */
+  }
+
+  main {
+    margin-bottom: 200px; /* Adiciona espaço na parte inferior do conteúdo para exibir o último item */
+  }
+
+  /* Role até o último item */
+  body {
+    overflow: auto; /* Ativa a rolagem */
+    scroll-behavior: smooth; /* Adiciona um deslocamento suave */
+  }
+
+  /* Ajuste a altura do último item */
+  #last-item {
+    margin-bottom: 50px; /* Espaço extra para garantir que o último item seja totalmente visível */
+  }
+}
+  
